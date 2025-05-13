@@ -64,3 +64,50 @@ class Superhero:
             self.__name = new_name
         else:
             print("Name cannot be empty.")
+
+            Activity 2: Polymorphism Challenge! 🎭
+
+Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
+
+# Base class (optional, for structure)
+class Mover:
+    def move(self):
+        pass  # This will be overridden by subclasses
+
+# Vehicle classes
+class Car(Mover):
+    def move(self):
+        print("🚗 Car: Driving on the road.")
+
+class Plane(Mover):
+    def move(self):
+        print("✈️ Plane: Flying in the sky.")
+
+class Boat(Mover):
+    def move(self):
+        print("🛥️ Boat: Sailing on the water.")
+
+# Animal classes
+class Dog(Mover):
+    def move(self):
+        print("🐶 Dog: Running on the ground.")
+
+class Bird(Mover):
+    def move(self):
+        print("🕊️ Bird: Flying through the air.")
+
+class Fish(Mover):
+    def move(self):
+        print("🐟 Fish: Swimming in the water.")
+
+# Demonstration function
+def show_movements(movers):
+    for mover in movers:
+        mover.move()
+
+# Create objects
+objects = [Car(), Plane(), Boat(), Dog(), Bird(), Fish()]
+
+# Show how each one moves
+show_movements(objects)
+
